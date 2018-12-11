@@ -13,7 +13,7 @@ void filtroPretoEsquerda(){
   digitalWrite (s3, LOW);
 }
 int leituraEsquerda(){
-    int out;
+  int out;
   if (digitalRead(out) == HIGH){
     return pulseIn (out, LOW);
   }
