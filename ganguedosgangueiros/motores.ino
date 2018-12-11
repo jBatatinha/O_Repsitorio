@@ -1,15 +1,3 @@
-void virarDireita(){
-  motorDireitaParar();
-  motorEsquerdaFrente();
-}
-void virarEsquerda(){
-  motorEsquerdaParar();
-  motorDireitaFrente();  
-}
-void seguirFrente(){
-   motorEsquerdaFrente();
-   motorDireitaFrente(); 
-}
 void motorDireitaParar(){
   int in1;
   int in2;
