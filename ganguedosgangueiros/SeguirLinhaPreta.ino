@@ -11,17 +11,41 @@ void seguirLinha () {
 }
 
 bool pretoDireita(){
-  return true;
+  ligarSensorCorDireita();
+  filtroPretoDireita();
+  if (leituraDireita() > preto){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 bool pretoEsquerda(){
-  return false;
+  ligarSensorCorEsquerda();
+  filtroPretoEsquerda();
+  if (leituraEsquerda() > preto){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 void virarDireita(){
 }
-void virarEsquerda(){
-  
+void virarEsquerda(){  
 }
 void seguirFrente(){
-
+}
+void ligarSensorCorDireita(){
+}
+void filtroPretoDireita(){
+}
+void ligarSensorCorEsquerda(){
+}
+void filtroPretoEsquerda(){
+}
+int leituraDireita(){
+}
+int leituraEsquerda(){
 }
 
