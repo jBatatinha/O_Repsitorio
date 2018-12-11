@@ -1,3 +1,3 @@
 # O_Repsitorio
-O Repositório de o o Grupo
+O Repositório da GANGUE DOS GANGUEIROS
 O melhor grupo de todos
