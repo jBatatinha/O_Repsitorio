@@ -75,6 +75,12 @@ void girarDireita (){
   motorEsquerdaFrente();
 }
 bool temObstaculo (){
-  
+  float distanciaCM = dist.Ranging (CM);
+  if (distanciaCM < 15){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 

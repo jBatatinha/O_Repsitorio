@@ -1,5 +1,7 @@
 #include <Ultrasonic.h>
 
+Ultrasonic dist (0,1);
+
 //Variáveis da calibração do sensor de cor
 int preto = 0;
 
