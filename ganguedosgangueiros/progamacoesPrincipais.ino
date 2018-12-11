@@ -67,10 +67,12 @@ void desviarObstaculo(){
 }
 
 void girarEsquerda (){
-  
+  motorDireitaFrente ();
+  motorEsquerdaTras();
 }
 void girarDireita (){
-  
+  motorDireitaTras();
+  motorEsquerdaFrente();
 }
 bool temObstaculo (){
   
