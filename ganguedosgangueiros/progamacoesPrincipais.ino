@@ -23,8 +23,8 @@ void seguirFrente(){
    motorDireitaFrente(); 
 }
 bool pretoDireita(){
-  ligarSensorCorDireita();
-  filtroPretoDireita();
+  ligarSensorCor();
+  filtroPreto();
   if (leituraDireita() > preto){
     return true;
   }
@@ -33,8 +33,8 @@ bool pretoDireita(){
   }
 }
 bool pretoEsquerda(){
-  ligarSensorCorEsquerda();
-  filtroPretoEsquerda();
+  ligarSensorCor();
+  filtroPreto();
   if (leituraEsquerda() > preto){
     return true;
   }
@@ -67,15 +67,15 @@ void girarDireita (){
   motorEsquerdaFrente();
 }
 bool verdeEsquerda (){
-  ligarSensorCorEsquerda();
+  ligarSensorCor();
   //Verde
-  filtroVerdeEsquerda ();
+  filtroVerde ();
   int valorVerde = leituraEsquerda();
   //Vermelho
-  filtroVermelhoEsquerda ();
+  filtroVermelho ();
   int valorVermelho = leituraEsquerda();
   //Azul
-  filtroAzulEsquerda ();
+  filtroAzul ();
   int valorAzul = leituraEsquerda();
   //Comparação
   if (valorVerde < verde && valorVermelho > vermelho && valorAzul > azul){
@@ -86,15 +86,15 @@ bool verdeEsquerda (){
   }
 }
 bool verdeDireita (){
-  ligarSensorCorDireita();
+  ligarSensorCor();
   //Verde
-  filtroVerdeDireita ();
+  filtroVerde ();
   int valorVerde = leituraDireita();
   //Vermelho
-  filtroVermelhoDireita ();
+  filtroVermelho ();
   int valorVermelho = leituraDireita();
   //Azul
-  filtroAzulDireita ();
+  filtroAzul ();
   int valorAzul = leituraDireita();
   //Comparação
   if (valorVerde < verde && valorVermelho > vermelho && valorAzul > azul){
