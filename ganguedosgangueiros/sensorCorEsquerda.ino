@@ -12,6 +12,15 @@ void filtroPretoEsquerda(){
   digitalWrite (s2, HIGH);
   digitalWrite (s3, LOW);
 }
+void filtroVerdeEsquerda(){
+
+}
+void filtroVermelhoEsquerda(){
+
+}
+void filtroAzulEsquerda(){
+
+}
 int leituraEsquerda(){
   int out;
   if (digitalRead(out) == HIGH){

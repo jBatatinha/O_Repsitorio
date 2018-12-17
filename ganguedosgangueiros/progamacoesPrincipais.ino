@@ -67,9 +67,41 @@ void girarDireita (){
   motorEsquerdaFrente();
 }
 bool verdeEsquerda (){
-  
+  ligarSensorCorEsquerda();
+  //Verde
+  filtroVerdeEsquerda ();
+  int valorVerde = leituraEsquerda();
+  //Vermelho
+  filtroVermelhoEsquerda ();
+  int valorVermelho = leituraEsquerda();
+  //Azul
+  filtroAzulEsquerda ();
+  int valorAzul = leituraEsquerda();
+  //Comparação
+  if (valorVerde < verde && valorVermelho > vermelho && valorAzul > azul){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 bool verdeDireita (){
-
+  ligarSensorCorDireita();
+  //Verde
+  filtroVerdeDireita ();
+  int valorVerde = leituraDireita();
+  //Vermelho
+  filtroVermelhoDireita ();
+  int valorVermelho = leituraDireita();
+  //Azul
+  filtroAzulDireita ();
+  int valorAzul = leituraDireita();
+  //Comparação
+  if (valorVerde < verde && valorVermelho > vermelho && valorAzul > azul){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
