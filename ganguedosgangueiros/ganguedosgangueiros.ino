@@ -16,6 +16,7 @@ void setup() {
   pinMode (10, OUTPUT);
   pinMode (11, OUTPUT);
 
+
   //Velocidade do motor
     //Esquerda
     pinMode (41, OUTPUT);

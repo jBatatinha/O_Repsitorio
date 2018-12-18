@@ -1,8 +1,8 @@
 //Ligar Sensor
 void ligarSensorCor(){
-  int s0=4;
-  int s1=5;
-
+  int s0 = 4;
+  int s1 = 5;
+  
   digitalWrite (s0, HIGH);
   digitalWrite (s1, HIGH);
 }
@@ -41,7 +41,7 @@ void filtroAzul(){
 
 //Leitura dos valores dos sensores
 int leituraDireita(){
-  int out=3;
+  int out = 3;
   if (digitalRead (out) == HIGH){
     return pulseIn (out, LOW);
   }
@@ -50,7 +50,7 @@ int leituraDireita(){
   }
 }
 int leituraEsquerda(){
-  int out=2;
+  int out = 2;
   if (digitalRead(out) == HIGH){
     return pulseIn (out, LOW);
   }
