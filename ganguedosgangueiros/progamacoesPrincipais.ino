@@ -138,4 +138,3 @@ bool verdeDireita (){
     return false;
   }
 }
-
