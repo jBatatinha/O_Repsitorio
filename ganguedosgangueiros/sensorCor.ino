@@ -1,31 +1,22 @@
-void ligarSensorCorDireita(){
+//Ligar Sensor
+void ligarSensorCor(){
   int s0;
   int s1;
 
   digitalWrite (s0, HIGH);
   digitalWrite (s1, HIGH);
 }
-void filtroPretoDireita(){
+
+//Filtros
+void filtroPreto(){
   int s2;
   int s3;
 
   digitalWrite (s2, HIGH);
   digitalWrite (s3, LOW);
 }
-void ligarSensorCorEsquerda(){
-  int s0;
-  int s1;
 
-  digitalWrite (s0, HIGH);
-  digitalWrite (s1, HIGH);
-}
-void filtroPretoEsquerda(){
-  int s2;
-  int s3;
-
-  digitalWrite (s2, HIGH);
-  digitalWrite (s3, LOW);
-}
+//Leitura dos valores dos sensores
 int leituraDireita(){
   int out;
   if (digitalRead (out) == HIGH){
@@ -36,7 +27,7 @@ int leituraDireita(){
   }
 }
 int leituraEsquerda(){
-    int out;
+  int out;
   if (digitalRead(out) == HIGH){
     return pulseIn (out, LOW);
   }
@@ -44,4 +35,3 @@ int leituraEsquerda(){
     return pulseIn (out, HIGH);
   }
 }
-

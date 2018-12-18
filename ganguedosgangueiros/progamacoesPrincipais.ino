@@ -23,8 +23,8 @@ void seguirFrente(){
    motorDireitaFrente(); 
 }
 bool pretoDireita(){
-  ligarSensorCorDireita();
-  filtroPretoDireita();
+  ligarSensorCor();
+  filtroPreto();
   if (leituraDireita() > preto){
     return true;
   }
@@ -33,8 +33,8 @@ bool pretoDireita(){
   }
 }
 bool pretoEsquerda(){
-  ligarSensorCorEsquerda();
-  filtroPretoEsquerda();
+  ligarSensorCor();
+  filtroPreto();
   if (leituraEsquerda() > preto){
     return true;
   }
