@@ -4,6 +4,9 @@ Ultrasonic dist (12,13);
 
 //Variáveis da calibração do sensor de cor
 int preto = 0;
+int verde = 0;
+int vermelho = 0;
+int azul = 0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -39,6 +42,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   desviarObstaculo();
+  detectarIntercessoes ();
   seguirLinha ();
 }
 
