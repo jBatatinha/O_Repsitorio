@@ -9,21 +9,10 @@ void seguirLinha () {
     seguirFrente();
   }
 }
-void virarDireita(){
-  motorDireitaParar();
-  motorEsquerdaFrente();
-}
-void virarEsquerda(){
-  motorEsquerdaParar();
-  motorDireitaFrente();  
-}
-void seguirFrente(){
-   motorEsquerdaFrente();
-   motorDireitaFrente(); 
-}
+
 bool pretoDireita(){
-  ligarSensorCor();
-  filtroPreto();
+  ligarSensorCorDireita();
+  filtroPretoDireita();
   if (leituraDireita() > preto){
     return true;
   }
@@ -32,13 +21,31 @@ bool pretoDireita(){
   }
 }
 bool pretoEsquerda(){
-  ligarSensorCor();
-  filtroPreto();
+  ligarSensorCorEsquerda();
+  filtroPretoEsquerda();
   if (leituraEsquerda() > preto){
     return true;
   }
   else{
     return false;
   }
+}
+void virarDireita(){
+}
+void virarEsquerda(){  
+}
+void seguirFrente(){
+}
+void ligarSensorCorDireita(){
+}
+void filtroPretoDireita(){
+}
+void ligarSensorCorEsquerda(){
+}
+void filtroPretoEsquerda(){
+}
+int leituraDireita(){
+}
+int leituraEsquerda(){
 }
 
