@@ -31,7 +31,6 @@ void filtroVermelho(){
   digitalWrite (s3, LOW);
 
 }
-
 void filtroAzul(){
   int s2=6;
   int s3=7;
@@ -59,4 +58,3 @@ int leituraEsquerda(){
     return pulseIn (out, HIGH);
   }
 }
-
