@@ -1,4 +1,7 @@
 #include <Ultrasonic.h>
+
+Ultrasonic dist (12,13);
+
 //Variáveis da calibração do sensor de cor
 int preto = 0;
 int verde = 0;
@@ -12,7 +15,7 @@ void setup() {
   pinMode (9, OUTPUT);
   pinMode (10, OUTPUT);
   pinMode (11, OUTPUT);
-
+  
   //Velocidade do motor
     //Esquerda
     pinMode (41, OUTPUT);
@@ -29,11 +32,16 @@ void setup() {
   pinMode (2, INPUT);
   pinMode (3, INPUT);
 
+  //Sensor Ultrassom
+  pinMode (12, INPUT);
+  pinMode (13, INPUT);
+  
   Serial.begin (9600);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  desviarObstaculo();
   detectarIntercessoes ();
   seguirLinha ();
 }
