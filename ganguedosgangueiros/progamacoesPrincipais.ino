@@ -1,4 +1,4 @@
-//Seguir Linha
+//Seguir Linha Preta
 void seguirLinha () {
   if (pretoDireita()) {
     virarDireita();
@@ -42,30 +42,22 @@ bool pretoEsquerda(){
     return false;
   }
 }
-
-//Desviar de obstáculos
-void desviarObstaculo(){
+//Detectar intercessões
+void detectarIntercessoes (){
   int delayGiro=100;
-  int delay1=100;
-  int delay2=100;
-  if (temObstaculo ()){
-    girarEsquerda();
+  if (verdeEsquerda ()&& verdeDireita()){
+    girarEsquerda ();
+    delay (delayGiro*2);
+  }
+  else if (verdeEsquerda()){
+    girarEsquerda ();
     delay (delayGiro);
-    seguirFrente();
-    delay (delay1);
-    girarDireita();
-    delay (delayGiro);
-    seguirFrente ();
-    delay (delay2);
+  }
+  else if (verdeDireita()){
     girarDireita ();
-    delay (delayGiro);
-    seguirFrente();
-    delay (delay1);
-    girarEsquerda();
     delay (delayGiro);
   }
 }
-
 void girarEsquerda (){
   motorDireitaFrente ();
   motorEsquerdaTras();
@@ -74,9 +66,38 @@ void girarDireita (){
   motorDireitaTras();
   motorEsquerdaFrente();
 }
-bool temObstaculo (){
-  float distanciaCM = dist.Ranging (CM);
-  if (distanciaCM < 15){
+bool verdeEsquerda (){
+  ligarSensorCor();
+  //Verde
+  filtroVerde ();
+  int valorVerde = leituraEsquerda();
+  //Vermelho
+  filtroVermelho ();
+  int valorVermelho = leituraEsquerda();
+  //Azul
+  filtroAzul ();
+  int valorAzul = leituraEsquerda();
+  //Comparação
+  if (valorVerde < verde && valorVermelho > vermelho && valorAzul > azul){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+bool verdeDireita (){
+  ligarSensorCor();
+  //Verde
+  filtroVerde ();
+  int valorVerde = leituraDireita();
+  //Vermelho
+  filtroVermelho ();
+  int valorVermelho = leituraDireita();
+  //Azul
+  filtroAzul ();
+  int valorAzul = leituraDireita();
+  //Comparação
+  if (valorVerde < verde && valorVermelho > vermelho && valorAzul > azul){
     return true;
   }
   else {
