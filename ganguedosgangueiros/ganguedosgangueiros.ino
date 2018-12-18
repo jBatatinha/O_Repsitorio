@@ -10,6 +10,14 @@ void setup() {
   pinMode (10, OUTPUT);
   pinMode (11, OUTPUT);
 
+  //Velocidade do motor
+    //Esquerda
+    pinMode (41, OUTPUT);
+    analogWrite (41, 255);
+    //Direita
+    pinMode (40, OUTPUT);
+    analogWrite (40, 255);
+
   //Sensor de cor
   pinMode (4, OUTPUT);
   pinMode (5, OUTPUT);
